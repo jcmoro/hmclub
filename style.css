@@ -1,7 +1,7 @@
 :root {
-  --brand: #4f9a2a;
-  --brand-bright: #8bd04a;
-  --slate: #1f2e3a;
+  --brand: #587e1b;
+  --brand-bright: #b1e956;
+  --slate: #1f3f54;
   --ground: #ffffff;
   --surface: #f6faf1;
   --ink: #263038;
@@ -13,8 +13,8 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --brand: #8bd04a;
-    --brand-bright: #a6e065;
+    --brand: #a5d95a;
+    --brand-bright: #b1e956;
     --slate: #e8edf1;
     --ground: #12181d;
     --surface: #1a2228;
