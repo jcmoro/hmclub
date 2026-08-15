@@ -9,10 +9,13 @@
 Squad, skills, arena, economy, staff, training and fixtures in one place.<br>
 Free, read-only, and nothing leaves your device.
 
-![Android](https://img.shields.io/badge/Android-in%20development-2e7d32?style=flat-square)
-![iOS](https://img.shields.io/badge/iOS-planned-546e7a?style=flat-square)
-![Read only](https://img.shields.io/badge/access-read--only-1565c0?style=flat-square)
-![Price](https://img.shields.io/badge/price-free-6a1b9a?style=flat-square)
+![Tests](https://img.shields.io/badge/tests-364%20passing-2e7d32?style=flat)
+![Architecture](https://img.shields.io/badge/architecture%20rules-34-2e7d32?style=flat)
+![Kotlin](https://img.shields.io/badge/Kotlin-2.4-7F52FF?style=flat&logo=kotlin&logoColor=white)
+![Android](https://img.shields.io/badge/Android-7.0%2B-3DDC84?style=flat&logo=android&logoColor=white)
+![iOS](https://img.shields.io/badge/iOS-arm64-000000?style=flat&logo=apple&logoColor=white)
+![Read only](https://img.shields.io/badge/access-read--only-1565c0?style=flat)
+![Price](https://img.shields.io/badge/price-free-6a1b9a?style=flat)
 
 ### [**→ jcmoro.github.io/hmclub**](https://jcmoro.github.io/hmclub/)
 
