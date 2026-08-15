@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy policy — Hattrick Manager Club</title>
+<meta name="description" content="What Hattrick Manager Club does with your data: no server, no trackers, everything stays on your device.">
+<link rel="icon" href="logo.webp">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <img src="logo.webp" alt="Hattrick Manager Club">
+  <h1>Privacy policy</h1>
+  <p class="sub">Hattrick Manager Club (mobile) · last updated 15 August 2026</p>
+</header>
+
+<main class="wrap">
+
+  <p>Hattrick Manager Club is a free, read-only CHPP app that shows a Hattrick manager the current state of their own club. This policy explains exactly what data it handles, why, for how long, and what you can do about it.</p>
+
+  <h2>Who is responsible</h2>
+  <p>Hattrick Manager Club is developed by a single independent Hattrick user. It is not operated by Hattrick Holdings Limited, and Hattrick takes no responsibility for it.</p>
+
+  <h2>The short version</h2>
+  <p><strong>There is no server.</strong> The app talks to Hattrick directly from your phone. Nothing you download is sent to the developer, and there is nowhere else for it to go. Deleting the app, or clearing its data from your phone's settings, removes everything.</p>
+
+  <h2>What we never ask for</h2>
+  <p>We never ask for your Hattrick login name or password, and we could not use them if you offered. Authorisation happens entirely through Hattrick's own OAuth flow: you sign in at Hattrick, Hattrick asks whether you want to grant this app access, and the app only ever receives an access token. This is required by clause 5.1 of the CHPP License Agreement.</p>
+
+  <h2>What is stored, and where</h2>
+  <p>Everything lives in the app's private storage on your device.</p>
+  <table>
+    <thead><tr><th>Data</th><th>Why</th><th>How long</th></tr></thead>
+    <tbody>
+      <tr>
+        <td>Your CHPP access token and its secret</td>
+        <td>To read your club data on your behalf</td>
+        <td>Until you revoke access or clear the app's data</td>
+      </tr>
+      <tr>
+        <td>Your Hattrick UserID</td>
+        <td>To notice if a different account authorises the app</td>
+        <td>Same as above</td>
+      </tr>
+      <tr>
+        <td>The CHPP responses the app downloaded, as dated snapshots, compressed</td>
+        <td>To show your club without downloading again, and to keep a record of your own data over time</td>
+        <td>Until you clear the app's data</td>
+      </tr>
+    </tbody>
+  </table>
+  <p>The access token is stored in the operating system's protected storage: on Android in <code>EncryptedSharedPreferences</code> with an AES-256-GCM master key held in the Keystore; on iOS in the Keychain with <code>ThisDeviceOnly</code> accessibility. Both are excluded from device backups on purpose, because a token restored onto a different phone would give that phone access to your Hattrick account.</p>
+  <p><strong>The downloaded responses accumulate.</strong> A second download that is identical to the previous one does not add a snapshot. This history exists so that data about your own club is not lost, and nothing derived from it is shown to you today.</p>
+
+  <h2>What we do not do</h2>
+  <ul class="plain">
+    <li>We do not sell your data, and we do not share it with any other application, website or service. This is also required by clause 5.2 of the CHPP License Agreement.</li>
+    <li>We do not use advertising, analytics or any third-party tracker. The app makes no network request to any host other than Hattrick's own CHPP endpoints.</li>
+    <li>We do not write anything back to Hattrick. The app is read-only.</li>
+    <li>We do not automate access to Hattrick. Every request follows something you did in the app.</li>
+    <li>We do not read another manager's private data. Any request for a team that is not yours is refused before it is sent.</li>
+  </ul>
+
+  <h2>Data about other people</h2>
+  <p>Some of what Hattrick sends you names other people: your players, your staff, the opposing teams in your fixture list. That data arrives because you asked Hattrick for your own club, it stays on your device under the same terms as the rest, and it is never sent anywhere.</p>
+
+  <h2>How you remove your data</h2>
+  <p>Any of these is enough:</p>
+  <ul class="plain">
+    <li><strong>Revoke access in the app.</strong> The token is invalidated at Hattrick, deleted from the device, and everything downloaded is deleted with it.</li>
+    <li><strong>Revoke access in Hattrick</strong>, under your CHPP settings. The next time the app checks, it finds the token rejected, deletes it and deletes everything downloaded.</li>
+    <li><strong>Clear the app's data from your phone's settings</strong>, or uninstall the app. Nothing survives.</li>
+  </ul>
+  <p>The app deliberately offers no storage management of its own: your phone already does that better, and duplicating it inside would add surface without adding capability.</p>
+  <p>If a different Hattrick account authorises the app, everything downloaded by the previous account is deleted first.</p>
+
+  <h2>Children</h2>
+  <p>The app is not directed at children. It requires a Hattrick account, and Hattrick's own terms govern who may hold one.</p>
+
+  <h2>Changes to this policy</h2>
+  <p>If what the app does with your data changes, this policy changes with it, and the date at the top changes too. The version in force ships with the app.</p>
+
+  <h2>Contact</h2>
+  <p>Through the CHPP contact channels of the product, or by Hattrick mail to the manager <strong>ubiker</strong>.</p>
+
+  <p class="back"><a href="index.html">← Back to Hattrick Manager Club</a></p>
+
+</main>
+
+<footer>
+  A CHPP product, built by one Hattrick manager.<br>
+  Not affiliated with, endorsed by, or operated by Hattrick Holdings Limited.<br>
+  Hattrick and the Hattrick logo are theirs.
+</footer>
+
+</body>
+</html>
