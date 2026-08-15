@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Política de privacidad — Hattrick Manager Club</title>
+<meta name="description" content="Qué hace Hattrick Manager Club con tus datos: sin servidor, sin rastreadores, todo se queda en tu teléfono.">
+<link rel="icon" href="logo.webp">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <img src="logo.webp" alt="Hattrick Manager Club">
+  <h1>Política de privacidad</h1>
+  <p class="sub">Hattrick Manager Club (móvil) · actualizada el 15 de agosto de 2026 · <a href="privacy.html">English</a></p>
+</header>
+
+<main class="wrap">
+
+  <p>Hattrick Manager Club es una aplicación CHPP gratuita y de sólo lectura que muestra a un manager de Hattrick el estado actual de su propio club. Esta política explica exactamente qué datos maneja, para qué, durante cuánto tiempo y qué puedes hacer al respecto.</p>
+
+  <h2>Quién responde</h2>
+  <p>Hattrick Manager Club lo desarrolla un único usuario independiente de Hattrick. No lo opera Hattrick Holdings Limited, y Hattrick no se responsabiliza de él.</p>
+
+  <h2>La versión corta</h2>
+  <p><strong>No hay servidor.</strong> La aplicación habla con Hattrick directamente desde tu teléfono. Nada de lo que descargas se envía al desarrollador, y no hay ningún otro sitio al que pueda ir. Borrar la aplicación, o borrar sus datos desde los ajustes del teléfono, lo elimina todo.</p>
+
+  <p>La única excepción es un aviso de diagnóstico cuando la propia aplicación falla, que no lleva ningún dato tuyo de Hattrick. Está descrito en <em>Cuando la aplicación falla</em>.</p>
+
+  <h2>Lo que nunca te pedimos</h2>
+  <p>Nunca te pedimos tu nombre de usuario ni tu contraseña de Hattrick, y no podríamos usarlos aunque nos los dieras. La autorización ocurre entera a través del propio flujo OAuth de Hattrick: tú entras en Hattrick, Hattrick te pregunta si quieres dar acceso a esta aplicación, y la aplicación sólo recibe un token de acceso. Lo exige la cláusula 5.1 del Acuerdo de Licencia CHPP.</p>
+
+  <h2>Qué se guarda, y dónde</h2>
+  <p>Todo vive en el almacenamiento privado de la aplicación, en tu dispositivo.</p>
+  <table>
+    <thead><tr><th>Dato</th><th>Para qué</th><th>Cuánto tiempo</th></tr></thead>
+    <tbody>
+      <tr>
+        <td>Tu token de acceso CHPP y su secreto</td>
+        <td>Para leer los datos de tu club en tu nombre</td>
+        <td>Hasta que revoques el acceso o borres los datos de la aplicación</td>
+      </tr>
+      <tr>
+        <td>Tu UserID de Hattrick</td>
+        <td>Para notar si autoriza la aplicación una cuenta distinta</td>
+        <td>Lo mismo</td>
+      </tr>
+      <tr>
+        <td>Las respuestas del CHPP que la aplicación ha descargado, como instantáneas fechadas y comprimidas</td>
+        <td>Para mostrar tu club sin volver a descargarlo, y para que quede constancia de tus propios datos a lo largo del tiempo</td>
+        <td>Hasta que borres los datos de la aplicación</td>
+      </tr>
+    </tbody>
+  </table>
+  <p>El token de acceso se guarda en el almacenamiento protegido del sistema operativo: en Android en <code>EncryptedSharedPreferences</code>, con una clave maestra AES-256-GCM custodiada por el Keystore; en iOS en el Llavero con accesibilidad <code>ThisDeviceOnly</code>. Los dos quedan excluidos de las copias de seguridad a propósito, porque un token restaurado en otro teléfono le daría a ese teléfono acceso a tu cuenta de Hattrick.</p>
+  <p><strong>Las respuestas descargadas se acumulan.</strong> Una segunda descarga idéntica a la anterior no añade instantánea. Ese histórico existe para que no se pierdan datos de tu propio club, y hoy no se te muestra nada derivado de él.</p>
+
+  <h2>Cuando la aplicación falla</h2>
+  <p>Cuando la aplicación se cierra por un error, o cuando Hattrick envía un documento que esta aplicación no sabe leer, se escribe un aviso de diagnóstico en su propio almacenamiento y se envía la siguiente vez que abras la aplicación. El aviso abre una incidencia en el repositorio público <a href="https://github.com/jcmoro/hmclub/issues">github.com/jcmoro/hmclub/issues</a>. Existe por un solo motivo: para que un fallo se arregle en vez de pasar desapercibido.</p>
+  <p>El aviso lleva la clase del error, la primera línea de su mensaje recortada a 200 caracteres, la línea del código de esta aplicación donde ocurrió, la versión de la aplicación, la versión de Android y el modelo del teléfono.</p>
+  <p>No lleva ningún dato tuyo de Hattrick. Ni nombres de equipo, ni nombres de jugador, ni partidos, ni importes, ni el token de acceso, ni nada que te identifique a ti o a tu cuenta de Hattrick. El propio aviso lo dice en su última línea, para que quien lea la incidencia pueda comprobarlo.</p>
+  <p><strong>Estos avisos son públicos</strong>, porque el repositorio donde se arregla la aplicación lo es. GitHub, Inc. los recibe y los almacena según sus propias condiciones.</p>
+  <p>El mismo fallo se avisa una sola vez. Hoy no hay forma de desactivar los avisos desde dentro de la aplicación: por ahora su autor es el único usuario, y se debe un interruptor antes de que eso deje de ser cierto.</p>
+
+  <h2>Lo que no hacemos</h2>
+  <ul class="plain">
+    <li>No vendemos tus datos, ni los compartimos con ninguna otra aplicación, sitio web o servicio. Lo exige también la cláusula 5.2 del Acuerdo de Licencia CHPP.</li>
+    <li>No usamos publicidad, ni analítica, ni rastreador alguno de terceros. La aplicación no mide nada sobre cómo la usas. Sus únicas peticiones de red van a los propios puntos de acceso CHPP de Hattrick y, cuando falla, a la API de incidencias de GitHub tal como se describe arriba.</li>
+    <li>No escribimos nada en Hattrick. La aplicación es de sólo lectura.</li>
+    <li>No automatizamos el acceso a Hattrick. Cada petición viene de algo que has hecho tú en la aplicación.</li>
+    <li>No leemos datos privados de otro manager. Cualquier petición de un equipo que no sea tuyo se rechaza antes de enviarse.</li>
+  </ul>
+
+  <h2>Datos de otras personas</h2>
+  <p>Parte de lo que Hattrick te envía nombra a otras personas: tus jugadores, tus empleados, los equipos rivales de tu calendario. Esos datos llegan porque le pediste a Hattrick tu propio club, se quedan en tu dispositivo en las mismas condiciones que el resto, y no se envían a ninguna parte.</p>
+
+  <h2>Cómo eliminas tus datos</h2>
+  <p>Con cualquiera de estas basta:</p>
+  <ul class="plain">
+    <li><strong>Revocar el acceso desde la aplicación.</strong> El token se invalida en Hattrick, se borra del dispositivo, y con él se borra todo lo descargado.</li>
+    <li><strong>Revocar el acceso en Hattrick</strong>, en tus ajustes CHPP. La siguiente vez que la aplicación lo compruebe, encontrará el token rechazado, lo borrará y borrará todo lo descargado.</li>
+    <li><strong>Borrar los datos de la aplicación desde los ajustes del teléfono</strong>, o desinstalarla. No sobrevive nada.</li>
+  </ul>
+  <p>La aplicación no ofrece gestión de almacenamiento propia, y es deliberado: tu teléfono ya lo hace mejor, y duplicarlo dentro añadiría superficie sin añadir capacidad.</p>
+  <p>Si autoriza la aplicación una cuenta de Hattrick distinta, lo descargado por la cuenta anterior se borra primero.</p>
+
+  <h2>Menores</h2>
+  <p>La aplicación no está dirigida a menores. Requiere una cuenta de Hattrick, y las propias condiciones de Hattrick rigen quién puede tenerla.</p>
+
+  <h2>Cambios en esta política</h2>
+  <p>Si cambia lo que la aplicación hace con tus datos, esta política cambia con ello, y la fecha de arriba cambia también. La versión en vigor es la que acompaña a la aplicación.</p>
+
+  <h2>Contacto</h2>
+  <p>Por los canales de contacto CHPP del producto, o por correo de Hattrick al manager <strong>ubiker</strong>.</p>
+
+  <p class="back"><a href="index.html">← Volver a Hattrick Manager Club</a></p>
+
+</main>
+
+<footer>
+  Un producto CHPP, hecho por un manager de Hattrick.<br>
+  Sin afiliación, respaldo ni operación por parte de Hattrick Holdings Limited.<br>
+  Hattrick y el logotipo de Hattrick son suyos.
+</footer>
+
+</body>
+</html>
