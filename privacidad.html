@@ -53,7 +53,7 @@
       </tr>
     </tbody>
   </table>
-  <p>El token de acceso se guarda en el almacenamiento protegido del sistema operativo: en Android en <code>EncryptedSharedPreferences</code>, con una clave maestra AES-256-GCM custodiada por el Keystore; en iOS en el Llavero con accesibilidad <code>ThisDeviceOnly</code>. Los dos quedan excluidos de las copias de seguridad a propósito, porque un token restaurado en otro teléfono le daría a ese teléfono acceso a tu cuenta de Hattrick.</p>
+  <p>El token de acceso se guarda en el almacenamiento protegido del sistema operativo: en Android se cifra con <code>AES-256-GCM</code> bajo una clave que nunca sale del Keystore del sistema; en iOS vive en el Llavero con accesibilidad <code>ThisDeviceOnly</code>. Los dos quedan excluidos de las copias de seguridad a propósito, porque un token restaurado en otro teléfono le daría a ese teléfono acceso a tu cuenta de Hattrick.</p>
   <p><strong>Las respuestas descargadas se acumulan.</strong> Una segunda descarga idéntica a la anterior no añade instantánea. Ese histórico existe para que no se pierdan datos de tu propio club, y hoy no se te muestra nada derivado de él.</p>
 
   <h2>Cuando la aplicación falla</h2>

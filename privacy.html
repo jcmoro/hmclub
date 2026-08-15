@@ -53,7 +53,7 @@
       </tr>
     </tbody>
   </table>
-  <p>The access token is stored in the operating system's protected storage: on Android in <code>EncryptedSharedPreferences</code> with an AES-256-GCM master key held in the Keystore; on iOS in the Keychain with <code>ThisDeviceOnly</code> accessibility. Both are excluded from device backups on purpose, because a token restored onto a different phone would give that phone access to your Hattrick account.</p>
+  <p>The access token is stored in the operating system's protected storage: on Android it is sealed with <code>AES-256-GCM</code> under a key that never leaves the Android Keystore; on iOS it lives in the Keychain with <code>ThisDeviceOnly</code> accessibility. Both are excluded from device backups on purpose, because a token restored onto a different phone would give that phone access to your Hattrick account.</p>
   <p><strong>The downloaded responses accumulate.</strong> A second download that is identical to the previous one does not add a snapshot. This history exists so that data about your own club is not lost, and nothing derived from it is shown to you today.</p>
 
   <h2>When the app breaks</h2>
