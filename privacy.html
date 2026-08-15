@@ -26,6 +26,8 @@
   <h2>The short version</h2>
   <p><strong>There is no server.</strong> The app talks to Hattrick directly from your phone. Nothing you download is sent to the developer, and there is nowhere else for it to go. Deleting the app, or clearing its data from your phone's settings, removes everything.</p>
 
+  <p>The single exception is a diagnostic note when the app itself breaks, which carries none of your Hattrick data. It is described under <em>When the app breaks</em>.</p>
+
   <h2>What we never ask for</h2>
   <p>We never ask for your Hattrick login name or password, and we could not use them if you offered. Authorisation happens entirely through Hattrick's own OAuth flow: you sign in at Hattrick, Hattrick asks whether you want to grant this app access, and the app only ever receives an access token. This is required by clause 5.1 of the CHPP License Agreement.</p>
 
@@ -54,10 +56,17 @@
   <p>The access token is stored in the operating system's protected storage: on Android in <code>EncryptedSharedPreferences</code> with an AES-256-GCM master key held in the Keystore; on iOS in the Keychain with <code>ThisDeviceOnly</code> accessibility. Both are excluded from device backups on purpose, because a token restored onto a different phone would give that phone access to your Hattrick account.</p>
   <p><strong>The downloaded responses accumulate.</strong> A second download that is identical to the previous one does not add a snapshot. This history exists so that data about your own club is not lost, and nothing derived from it is shown to you today.</p>
 
+  <h2>When the app breaks</h2>
+  <p>When the app closes with an error, or when Hattrick sends a document this app cannot read, it writes a short diagnostic note in its own storage and sends it the next time you open the app. The note opens an issue in the public repository at <a href="https://github.com/jcmoro/hmclub/issues">github.com/jcmoro/hmclub/issues</a>. This exists for one reason: so that a failure gets fixed instead of going unnoticed.</p>
+  <p>The note carries the class of the error, the first line of its message cut to 200 characters, the line of this app's own code where it happened, the app version, the Android version and the phone model.</p>
+  <p>It carries none of your Hattrick data. No team names, no player names, no fixtures, no amounts, no access token, and nothing that identifies you or your Hattrick account. The note says so in its own last line, so that anyone reading the issue can check.</p>
+  <p><strong>These reports are public</strong>, because the repository where the app is fixed is public. GitHub, Inc. receives and stores them under its own terms.</p>
+  <p>The same failure is reported once. There is no way to turn the reports off from inside the app today; the author is the only user so far, and an off switch is owed before that stops being true.</p>
+
   <h2>What we do not do</h2>
   <ul class="plain">
     <li>We do not sell your data, and we do not share it with any other application, website or service. This is also required by clause 5.2 of the CHPP License Agreement.</li>
-    <li>We do not use advertising, analytics or any third-party tracker. The app makes no network request to any host other than Hattrick's own CHPP endpoints.</li>
+    <li>We do not use advertising, analytics or any third-party tracker. The app measures nothing about how you use it. Its only network requests are to Hattrick's own CHPP endpoints and, when it breaks, to GitHub's issue API as described above.</li>
     <li>We do not write anything back to Hattrick. The app is read-only.</li>
     <li>We do not automate access to Hattrick. Every request follows something you did in the app.</li>
     <li>We do not read another manager's private data. Any request for a team that is not yours is refused before it is sent.</li>
