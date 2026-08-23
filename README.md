@@ -61,7 +61,7 @@ Squad · Player · Club · Matches. Light and dark, following your phone or fixe
 ![Konsist](https://img.shields.io/badge/Konsist-architecture%20rules-2e7d32?style=flat-square)
 ![ktlint](https://img.shields.io/badge/ktlint-1.6-2e7d32?style=flat-square)
 ![Warnings](https://img.shields.io/badge/warnings-as%20errors-2e7d32?style=flat-square)
-![CI](https://img.shields.io/badge/CI-GitHub%20Actions-2088FF?style=flat-square&logo=githubactions&logoColor=white)
+![Gate](https://img.shields.io/badge/gate-make%20ci-2e7d32?style=flat-square)
 
 </div>
 
@@ -98,8 +98,8 @@ flowchart LR
     style D fill:#e2f3c8,stroke:#587e1b
 ```
 
-That is not a diagram of good intentions. **34 architecture rules** run on every push and fail the
-build with file and line if the domain reaches for a framework, if one context reaches into
+That is not a diagram of good intentions. **34 architecture rules** run with the test suite and fail
+the build with file and line if the domain reaches for a framework, if one context reaches into
 another, or if a screen carries a hardcoded string.
 
 ## What the numbers say
@@ -109,7 +109,7 @@ another, or if a screen carries a hardcoded string.
 | **567 tests** | on the JVM, on Android and on the iOS simulator |
 | **34 architecture rules** | Konsist, run as tests, no exceptions list |
 | **13 CHPP files** | each with its own version and its own cache lifetime |
-| **5 CI jobs** | nothing merges unless every one of them is green |
+| **1 gate** | `make ci` runs the whole pipeline locally, and nothing opens a pull request unless it is green |
 | **0 warnings** | a Kotlin warning fails the build; ktlint guards the style |
 
 ## Decisions worth naming

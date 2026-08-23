@@ -101,6 +101,9 @@ dl.features > div:first-child { border-top: 0; }
 dl.features dt { font-weight: 700; color: var(--brand); }
 dl.features dd { margin: 0; color: var(--ink-soft); }
 
+.shots { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin: 0 0 18px; }
+.shots img { width: 100%; height: auto; display: block; border: 1px solid var(--rule); border-radius: 10px; box-shadow: var(--shadow); }
+
 ul.plain { margin: 0 0 16px; padding-left: 1.15em; }
 ul.plain li { margin-bottom: 8px; }
 
@@ -128,6 +131,7 @@ footer a { color: var(--ink-soft); }
   header { padding: 44px 20px 36px; }
   h1 { font-size: 1.7rem; }
   dl.features > div { grid-template-columns: 1fr; gap: 2px; }
+  .shots { grid-template-columns: repeat(2, 1fr); gap: 10px; }
   table { font-size: .9rem; }
   th, td { padding: 9px 8px; }
 }
