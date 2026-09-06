@@ -57,11 +57,12 @@
   <p><strong>Las respuestas descargadas se acumulan.</strong> Una segunda descarga idéntica a la anterior no añade instantánea. Ese histórico existe para que no se pierdan datos de tu propio club, y hoy no se te muestra nada derivado de él.</p>
 
   <h2>Cuando la aplicación falla</h2>
-  <p>Cuando la aplicación se cierra por un error, o cuando Hattrick envía un documento que esta aplicación no sabe leer, se escribe un aviso de diagnóstico en su propio almacenamiento y se envía la siguiente vez que abras la aplicación. El aviso abre una incidencia en el repositorio público <a href="https://github.com/jcmoro/hmclub/issues">github.com/jcmoro/hmclub/issues</a>. Existe por un solo motivo: para que un fallo se arregle en vez de pasar desapercibido.</p>
+  <p>Cuando la aplicación se cierra por un error, o cuando Hattrick envía un documento que esta aplicación no sabe leer, se escribe un aviso de diagnóstico en su propio almacenamiento. <strong>El aviso se queda en tu teléfono hasta que tú decidas enviarlo.</strong> La aplicación te lo ofrece en el menú, diciendo cuántos hay esperando, y si eliges enviar uno se abre tu navegador en el formulario de incidencias de <a href="https://github.com/jcmoro/hmclub/issues">github.com/jcmoro/hmclub/issues</a> con el texto ya escrito, de modo que lees exactamente lo que se va a enviar antes de enviarlo, y la incidencia la abres tú con tu propia cuenta de GitHub. Existe por un solo motivo: para que un fallo se arregle en vez de pasar desapercibido.</p>
+  <p>Hasta el 6 de septiembre de 2026 la aplicación enviaba esos avisos por su cuenta, con un token propio que viajaba dentro del paquete instalable. Ya no lo hace, y el token ha desaparecido: nada sale de tu teléfono si no lo pides tú.</p>
   <p>El aviso lleva la clase del error, la primera línea de su mensaje recortada a 200 caracteres, la línea del código de esta aplicación donde ocurrió, la versión de la aplicación, la versión de Android y el modelo del teléfono.</p>
   <p>No lleva ningún dato tuyo de Hattrick. Ni nombres de equipo, ni nombres de jugador, ni partidos, ni importes, ni el token de acceso, ni nada que te identifique a ti o a tu cuenta de Hattrick. El propio aviso lo dice en su última línea, para que quien lea la incidencia pueda comprobarlo.</p>
   <p><strong>Estos avisos son públicos</strong>, porque el repositorio donde se arregla la aplicación lo es. GitHub, Inc. los recibe y los almacena según sus propias condiciones.</p>
-  <p>El mismo fallo se avisa una sola vez. Hoy no hay forma de desactivar los avisos desde dentro de la aplicación: por ahora su autor es el único usuario, y se debe un interruptor antes de que eso deje de ser cierto.</p>
+  <p>El mismo fallo se anota una sola vez. No hay nada que desactivar: no se envía nada si no lo envías tú, y un aviso que nadie envía se borra a los treinta días.</p>
 
   <h2>Lo que no hacemos</h2>
   <ul class="plain">

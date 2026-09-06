@@ -57,16 +57,17 @@
   <p><strong>The downloaded responses accumulate.</strong> A second download that is identical to the previous one does not add a snapshot. This history exists so that data about your own club is not lost, and nothing derived from it is shown to you today.</p>
 
   <h2>When the app breaks</h2>
-  <p>When the app closes with an error, or when Hattrick sends a document this app cannot read, it writes a short diagnostic note in its own storage and sends it the next time you open the app. The note opens an issue in the public repository at <a href="https://github.com/jcmoro/hmclub/issues">github.com/jcmoro/hmclub/issues</a>. This exists for one reason: so that a failure gets fixed instead of going unnoticed.</p>
+  <p>When the app closes with an error, or when Hattrick sends a document this app cannot read, it writes a short diagnostic note in its own storage. <strong>The note stays on your phone until you decide to send it.</strong> The app offers it to you in the menu, with how many are waiting, and if you choose to send one it opens your browser on the issue form at <a href="https://github.com/jcmoro/hmclub/issues">github.com/jcmoro/hmclub/issues</a> with the text already filled in, so you read exactly what is going to be sent before it is sent, and the issue is opened by you, from your own GitHub account. This exists for one reason: so that a failure gets fixed instead of going unnoticed.</p>
+  <p>Until the 6th of September 2026 the app sent those notes by itself, with a token of its own that travelled inside the installable package. It no longer does, and the token is gone: nothing leaves your phone unless you ask for it.</p>
   <p>The note carries the class of the error, the first line of its message cut to 200 characters, the line of this app's own code where it happened, the app version, the Android version and the phone model.</p>
   <p>It carries none of your Hattrick data. No team names, no player names, no fixtures, no amounts, no access token, and nothing that identifies you or your Hattrick account. The note says so in its own last line, so that anyone reading the issue can check.</p>
   <p><strong>These reports are public</strong>, because the repository where the app is fixed is public. GitHub, Inc. receives and stores them under its own terms.</p>
-  <p>The same failure is reported once. There is no way to turn the reports off from inside the app today; the author is the only user so far, and an off switch is owed before that stops being true.</p>
+  <p>The same failure is noted once. There is nothing to turn off: nothing is sent unless you send it, and a note nobody sends is deleted after thirty days.</p>
 
   <h2>What we do not do</h2>
   <ul class="plain">
     <li>We do not sell your data, and we do not share it with any other application, website or service. This is also required by clause 5.2 of the CHPP License Agreement.</li>
-    <li>We do not use advertising, analytics or any third-party tracker. The app measures nothing about how you use it. Its only network requests are to Hattrick's own CHPP endpoints and, when it breaks, to GitHub's issue API as described above.</li>
+    <li>We do not use advertising, analytics or any third-party tracker. The app measures nothing about how you use it. Its only network requests are to Hattrick's own CHPP endpoints. It does not talk to GitHub at all: when you send a diagnostic note, it is your browser and your account that do.</li>
     <li>We do not write anything back to Hattrick. The app is read-only.</li>
     <li>We do not automate access to Hattrick. Every request follows something you did in the app.</li>
     <li>We do not read another manager's private data. Any request for a team that is not yours is refused before it is sent.</li>
